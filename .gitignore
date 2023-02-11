@@ -1,0 +1,94 @@
+# =============== #
+# Unity generated #
+# =============== #
+/Project2D_SDA/[Ll]ibrary/
+/Project2D_SDA/[Tt]emp/
+/Project2D_SDA/[Oo]bj/
+/Project2D_SDA/[Bb]uild/
+/Project2D_SDA/[Bb]uilds/
+/Project2D_SDA/[Ll]ogs/
+/Project2D_SDA/Assets/AssetStoreTools*
+/Project2D_SDA/UnityPackageManager
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+/Project2D_SDA/.consulo/
+/Project2D_SDA/.vs/
+/Project2D_SDA/ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vscode
+
+# ====================== #
+# Gradle cache directory #
+# ====================== #
+/Project2D_SDA/.gradle/
+
+# ============================= #
+# Unity3D generated meta files  #
+# ============================= #
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# ======================================== #
+# Unity3D generated file on crash reports  #
+# ======================================== #
+sysinfo.txt
+*.stackdump
+
+# ======================================== #
+# Crashlytics generated file               #
+# ======================================== #
+crashlytics-build.properties
+
+# ==================== #
+# Builds               #
+# ==================== #
+*.apk
+*.unitypackage
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# =============== #
+#      Other      #
+# =============== #
+*.blend1
+*.orig
+*.orig.meta
+*.blend1.meta
+
+# =============== #
+#    Whiteboard   #
+# =============== #
+Project2D_SDA.rar
+Project2D_SDA.7z
+
+
+# =============== #
+#       Rider	  #
+# =============== #
+/Project2D_SDA/.idea/
