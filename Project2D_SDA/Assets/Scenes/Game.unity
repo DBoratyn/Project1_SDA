@@ -1074,6 +1074,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 1296740530}
+  playerSpeed: 10
+  sprintMultiplayer: 2
+  maxWalkSpeed: 5
+  maxRunSpeedl: 10
 --- !u!1 &1480492416
 GameObject:
   m_ObjectHideFlags: 0
