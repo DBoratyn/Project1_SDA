@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Source.Core.StateMachine.States
+namespace Core
 {
     public class GameState : BaseState
     {
