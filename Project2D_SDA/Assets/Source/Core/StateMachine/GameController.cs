@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Player;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UI;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -10,6 +12,14 @@ namespace Core
 {
     public class GameController : MonoBehaviour
     {
+        [SerializeField]
+        private MenuView menuView;
+        public MenuView MenuView => menuView;
+
+        [SerializeField]
+        private PlayerMovement playerMovement;
+        public PlayerMovement PlayerMovement => playerMovement;
+
         private BaseState currentState;
 
         private void Start()
