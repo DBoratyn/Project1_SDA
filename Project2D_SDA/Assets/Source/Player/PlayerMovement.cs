@@ -11,6 +11,7 @@ namespace Player
     {
         private const string HORIZONTAL_AXIS = "Horizontal";
         private const string SPRINT_AXIS = "Sprint";
+        private const string JUMP_AXIS = "Jump";
 
         [SerializeField]
         private Rigidbody2D rigidbody2D;
@@ -27,6 +28,8 @@ namespace Player
         [SerializeField]
         private float maxRunSpeed;
 
+        private bool isJumpButtonClicked;
+
         public void Init() { 
             gameObject.SetActive(true);
         }
@@ -35,16 +38,35 @@ namespace Player
         {
             float playerInput = Input.GetAxisRaw(HORIZONTAL_AXIS);
             float sprintInput = Input.GetAxisRaw(SPRINT_AXIS);
+            float jumpInput = Input.GetAxisRaw(JUMP_AXIS);
 
-            if (playerInput == 0)
+            var result = Physics2D.BoxCast(this.transform.position, 
+                this.transform.localScale, 0f, 
+                Vector2.down, .2f);
+
+            if (playerInput == 0 && result.collider != null )
             {
                 rigidbody2D.velocity = Vector2.zero;
             }
+
+            if (jumpInput == 0)
+                isJumpButtonClicked = false;
 
             float finalMultiplier = playerInput * playerSpeed;
             if (sprintInput > 0)
             {
                 finalMultiplier *= sprintMultiplayer;
+            }
+
+            if(jumpInput > 0 && !isJumpButtonClicked)
+            {
+                isJumpButtonClicked = true;
+
+                
+                if (result.collider != null && result.collider.CompareTag("JumpFloor"))
+                {
+                    rigidbody2D.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                }
             }
 
             rigidbody2D.AddForce(Vector2.right * finalMultiplier, ForceMode2D.Force);
